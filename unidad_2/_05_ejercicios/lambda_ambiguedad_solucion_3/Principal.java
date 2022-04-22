@@ -1,11 +1,17 @@
 public class Principal {
     public static void main(String[] args) {
-        //casting a nivel de dato
-        Principal.engine((int x,int y)-> x+y);
-        Principal.engine((int x,int y)-> x*y);
-        Principal.engine((int x,int y)-> x/y);
-        Principal.engine((long x,long y)-> x-y);
-        Principal.engine((long x,long y)-> x%y);
+        //Casting a nivel de Interfaz
+        CalculadoraInt objInt=(x,y)-> x+y;
+        Principal.engine(objInt);
+        objInt=(x,y)-> x*y;
+        Principal.engine(objInt);
+        objInt=(x,y)-> x/y;
+        Principal.engine(objInt);
+        //-----
+        CalculadoraLong objLong=(x,y)-> x-y;
+        Principal.engine(objLong);
+        objLong=(x,y)-> x%y;
+        Principal.engine(objLong);
     }
     private static void engine(CalculadoraInt cal){
         int x=2,y=4;
