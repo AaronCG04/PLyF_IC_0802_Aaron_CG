@@ -1,7 +1,5 @@
 import java.util.List;
 
-import org.w3c.dom.ls.LSException;
-
 public class FP_Functional_Excercises {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(12,9,13,4,6,2,4,12,15);
